@@ -27,10 +27,6 @@
 @import url(./blocks/header-menu-links/__item/header-menu-links__item.css);
 @import url(./blocks/header-menu-links/__link/header-menu-links__link.css);
 
-/* Block button */
-
-@import url(./blocks/button/button.css);
-
 /* Block about */
 
 @import url(./blocks/about/about.css);
