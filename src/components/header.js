@@ -58,17 +58,17 @@ export class Header {
 
     _trackWindowSize() {
         window.addEventListener('resize', () => {
-            if(window.matchMedia('(max-width: 550px)').matches 
+            if(window.matchMedia('(max-width: 1110px)').matches 
             && this.menuToggle.checked) {
                 this.headerLogoContainer.classList.add('header__logo-container_position_center');
                 this.headerLogo.classList.add('logo_open-menu-image');
-            } else if(window.matchMedia('(min-width: 550px)').matches 
+            } else if(window.matchMedia('(min-width: 1110px)').matches 
             && this.menuToggle.checked){
                 this.headerLogoContainer.classList.remove('header__logo-container_position_center');
                 this.headerLogo.classList.remove('logo_open-menu-image');
             }
     
-            if(window.matchMedia('(min-width: 870px)').matches
+            if(window.matchMedia('(min-width: 1110px)').matches
             && this.menuToggle.checked) {
                 this._closeMenuHamburger();
             }
@@ -80,52 +80,52 @@ export class Header {
 
         this.menuButton.addEventListener('click', () => {
 
-            // Если экран < 550px и меню открыто
-            if (window.matchMedia('(max-width: 550px)').matches
+            // Если экран < 1110px и меню открыто
+            if (window.matchMedia('(max-width: 1110px)').matches
             && !this.menuToggle.checked) {
                 this.headerLogoContainer.classList.add('header__logo-container_position_center');
                 this.headerLogo.classList.add('logo_open-menu-image');
                 this.header.classList.add('header_open-menu');
-                this.headerMenuLinks.classList.add('header__menu-links_open-menu');
-                this.headerMenuLinksItem.classList.add('header__menu-links-item_open-menu');
+                // this.headerMenuLinks.classList.add('header__menu-links_open-menu');
+                // this.headerMenuLinksItem.classList.add('header__menu-links-item_open-menu');
 
                 // Если был скролл
                 if (this.scrollFlag) {
                     this.header.classList.remove('header_scroll');
                     this.headerLogo.classList.remove('logo_second-image');
                 }
-                // Если экран < 550px и меню закрыто
-            } else if (window.matchMedia('(max-width: 550px)').matches
+                // Если экран < 1110px и меню закрыто
+            } else if (window.matchMedia('(max-width: 1110px)').matches
             && this.menuToggle.checked) {
                 this.headerLogoContainer.classList.remove('header__logo-container_position_center');
                 this.headerLogo.classList.remove('logo_open-menu-image');
                 this.header.classList.remove('header_open-menu');
-                this.headerMenuLinks.classList.remove('header__menu-links_open-menu');
-                this.headerMenuLinksItem.classList.remove('header__menu-links-item_open-menu');
+                // this.headerMenuLinks.classList.remove('header__menu-links_open-menu');
+                // this.headerMenuLinksItem.classList.remove('header__menu-links-item_open-menu');
 
                 // Если был скролл
                 if (this.scrollFlag) {
                     this.header.classList.add('header_scroll');
                     this.headerLogo.classList.add('logo_second-image');
                 }
-                // Если экран > 550px и меню открыто
-            } else if (window.matchMedia('(min-width: 550px)').matches 
+                // Если экран > 1110px и меню открыто
+            } else if (window.matchMedia('(min-width: 1110px)').matches 
             && !this.menuToggle.checked) {
                 this.header.classList.add('header_open-menu');
-                this.headerMenuLinks.classList.add('header__menu-links_open-menu');
-                this.headerMenuLinksItem.classList.add('header__menu-links-item_open-menu');
+                // this.headerMenuLinks.classList.add('header__menu-links_open-menu');
+                // this.headerMenuLinksItem.classList.add('header__menu-links-item_open-menu');
 
                 // Если был скролл
                 if (this.scrollFlag) {
                     this.header.classList.remove('header_scroll');
                     this.headerLogo.classList.remove('logo_second-image');
                 }
-                // Если экран > 550px и меню закрыто
-            } else if (window.matchMedia('(min-width: 550px)').matches 
+                // Если экран > 1110px и меню закрыто
+            } else if (window.matchMedia('(min-width: 1110px)').matches 
             && this.menuToggle.checked) {
                 this.header.classList.remove('header_open-menu');
-                this.headerMenuLinks.classList.remove('header__menu-links_open-menu');
-                this.headerMenuLinksItem.classList.remove('header__menu-links-item_open-menu');
+                // this.headerMenuLinks.classList.remove('header__menu-links_open-menu');
+                // this.headerMenuLinksItem.classList.remove('header__menu-links-item_open-menu');
 
                 // Если был скролл
                 if (this.scrollFlag) {
