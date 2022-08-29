@@ -18,3 +18,12 @@
     background: url(../../../images/popup/popup_close_white.png) no-repeat;
   }
 }
+
+
+@media screen and (max-width: 400px) {
+  .popup__close-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+}
