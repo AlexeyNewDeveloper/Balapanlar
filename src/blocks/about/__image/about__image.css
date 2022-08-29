@@ -7,9 +7,16 @@
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
   .about__image {
     border-radius: 20px;
     border-bottom-left-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 440px) and (max-width: 768px) {
+  .about__image {
+    border-radius: 40px;
+    border-bottom-left-radius: 60px;
   }
 }

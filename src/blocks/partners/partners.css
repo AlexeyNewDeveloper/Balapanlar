@@ -4,3 +4,15 @@
     padding-top: 160px;
     padding-bottom: 10px;
 }
+
+@media screen and (max-width: 440px) {
+    .partners {
+        padding-top: 100px;
+    }
+  }
+  
+  @media screen and (min-width: 440px) and (max-width: 768px) {
+    .partners {
+        padding-top: 80px;
+    }
+  }

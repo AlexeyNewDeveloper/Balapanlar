@@ -7,8 +7,14 @@
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 440px) {
   .about__overlay {
     border-bottom-left-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 440px) and (max-width: 768px) {
+  .about__overlay {
+    border-bottom-left-radius: 40px;
   }
 }
