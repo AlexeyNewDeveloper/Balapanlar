@@ -20,7 +20,7 @@
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 525px) {
   .popup__close-btn {
     position: fixed;
     top: 10px;
