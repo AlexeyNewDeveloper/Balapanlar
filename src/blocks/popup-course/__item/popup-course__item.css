@@ -38,6 +38,5 @@
     padding: 15px;
     max-width: calc(100% - 50px);
     max-height: unset;
-    overflow: auto;
   }
 }

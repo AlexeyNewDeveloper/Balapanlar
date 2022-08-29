@@ -11,5 +11,6 @@
     font-size: 20px;
     line-height: 24px;
     cursor: pointer;
+    background: none !important;
     position: static !important; 
 }
