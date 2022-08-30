@@ -1,0 +1,11 @@
+.scroll-container {
+    display: flex; 
+    overscroll-behavior: none;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 760px) {
+    .scroll-container {
+        flex-direction: column; 
+    }
+}

@@ -18,12 +18,12 @@
 
 @media screen and (max-width: 768px) {
   .intro__title {
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 64px;
+    line-height: 78px;
   }
 }
 
-@media screen and (max-width: 476px) {
+@media screen and (max-width: 660px) {
   .intro__title {
     max-width: 90%;
     font-size: 36px;
