@@ -1,7 +1,3 @@
-import { head } from 'lodash';
-
-
-
 export class Header {
     constructor({header}) {
         this.header = header;
