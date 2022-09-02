@@ -25,16 +25,15 @@ export class SectionPartners extends Popup {
     }
 
 
-    _renderPartners(partner, partnerLink) {
-        const partnerLogo = partnerLink.querySelector(this._params.logoSelector);
+
+    _addSrcImage(partner, partnerLogo) {
         partnerLogo.src = partner.image;
-        return partnerLink;
     }
 
 
-    _addPartner(partner, partnerLink) {
-        const renderedPartner = this._renderPartners(partner, partnerLink);
-        this._container.append(renderedPartner);
+    _addPartner(partner, partnerLogo, partnerLink) {
+        this._addSrcImage(partner, partnerLogo);
+        this._container.append(partnerLink);
     }
 
 
@@ -54,8 +53,8 @@ export class SectionPartners extends Popup {
         partnersList.forEach(partner => {
             const partnerLink = this._params.partnerNode.cloneNode(true);
             const partnerLogo = partnerLink.querySelector(this._params.logoSelector);
-            this._addPartner(partner, partnerLink);
-            this._setEventListenersSectionPartners(partnerLink, partner);
+            this._addPartner(partner, partnerLogo, partnerLink);
+            this._setEventListenersSectionPartners(partnerLogo, partner);
         })
     }
 
