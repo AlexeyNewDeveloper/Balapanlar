@@ -1,0 +1,11 @@
+.ext-links {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #252525;
+  transition: background-color .3s linear;
+}
+
+.ext-links:hover {
+  background-color: #353535;
+}
