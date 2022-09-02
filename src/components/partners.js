@@ -1,5 +1,5 @@
-import { openPopup } from './utils.js';
-import { partnerPopup } from './constants.js';
+import { openPopup } from "./utils.js";
+import { partnerPopup } from "./constants.js";
 
 export const partnersList = [
   {
@@ -11,7 +11,7 @@ export const partnersList = [
   {
     image: new URL("./../images/logo/partner-logo (2).png", import.meta.url),
     about:
-      "Фонд работает в 45 регионах и с осени 2021 мы их единственные партнёры в Карачаево-Черкесии. Совместно проводим программу профориентации «Поколение Выбор». В 2021–2022 в ней приняли участие 35 подростков из 2 школ аула Икон-Халк и посёлка Эркен-Шахар. В сезоне 2022–2023 планируются ещё две школы.",
+      "Фонд работает в 45 регионах и с осени 2021 мы их единственные партнёры в Карачаево-Черкесии. <br/> <br/> Совместно проводим программу профориентации «Поколение Выбор»."  + "\n" +  "В 2021–2022 в ней приняли участие 35 подростков из 2 школ аула Икон-Халк и посёлка Эркен-Шахар. В сезоне 2022–2023 планируются ещё две школы.",
     website: "https://xn----7sbfgufj4abfcqfum7kl6d.xn--p1ai/",
   },
   {
@@ -35,8 +35,9 @@ function renderPartners(partnerImage, partnerAbout, partnerWebsite) {
 
   partnerLogo.addEventListener("click", function () {
     document.querySelector(".popup-partner__logo-img").src = partnerImage;
-    document.querySelector(".popup-partner__text").textContent = partnerAbout;
-    document.querySelector(".popup-partner__website-link").href = partnerWebsite;
+    document.querySelector(".popup-partner__text").innerHTML = partnerAbout;
+    document.querySelector(".popup-partner__website-link").href =
+      partnerWebsite;
 
     openPopup(partnerPopup);
   });
