@@ -3,8 +3,8 @@
   border: none;
   padding: 0;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 35px;
+  right: 35px;
   background: url(../../../images/popup/popup_close.png) no-repeat;
   width: 30px;
   height: 30px;
@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 1024px) {
   .popup__close-btn {
-    top: -35px;
+    top: -40px;
     right: 0;
     background: url(../../../images/popup/popup_close_white.png) no-repeat;
   }

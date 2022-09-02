@@ -15,6 +15,7 @@
 }
 
 .popup-course__close-btn:hover {
+  opacity: 1;
   color: #353535;
 }
 

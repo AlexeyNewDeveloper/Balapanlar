@@ -7,6 +7,10 @@
   border-radius: 0 0 60px 60px;
 }
 
+.partners__horizon {
+  padding: 100px;
+}
+
 @media screen and (max-width: 768px) {
   .partners {
     padding-top: 100px;

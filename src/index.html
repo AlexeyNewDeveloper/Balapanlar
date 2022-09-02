@@ -551,7 +551,7 @@
               href="https://docs.google.com/forms/d/e/1FAIpQLScRkeum4swQ7Kyv1-04uBeVWIdb8AwhyJE2np9_wFp5ucp3qw/viewform"
               >Записаться</a
             >
-            <button class="popup-course__close-btn">
+            <button class="popup__close-btn popup-course__close-btn">
               Закрыть
             </button>
           </div>
@@ -559,7 +559,7 @@
       </div>
       <div class="popup popup-partner">
         <div class="popup-partner__container">
-          <button class="popup__close-btn popup-partner__close-btn" type="button" aria-label="закрыть">
+          <button class="popup__close-btn" type="button" aria-label="закрыть">
           </button>
           <div class="popup-partner__logo-box">
             <img
@@ -568,12 +568,8 @@
               alt="логотип партнера"
             />
           </div>
-          <p class="popup-partner__text">
-            Lecturers Without Borders&nbsp;&mdash; сообщество молодых учёных со&nbsp;всего мира, 
-            которые проводят лекции и&nbsp;мастер-классы для школ. Среди лекторов много учёных из&nbsp;России. 
-            Для нас математики из&nbsp;Сорбонны проводили занятия по&nbsp;квази-кристаллам, 
-            а&nbsp;в&nbsp;будущем мы&nbsp;планируем привозить лекторов в&nbsp;наш центр.
-          </p>
+          <div class="popup-partner__text-container"> <!--Используй теперь этот класс, когда будешь вставлять текст-->
+          </div>
           <a class="ext-links popup-partner__website-link" href=""  target="_blank">
             Сайт партнёра
           </a>
