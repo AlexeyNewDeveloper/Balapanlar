@@ -5,7 +5,7 @@ import {
   paramsSectionPartners,
   paramsSectionCourses,
  } from './components/constants.js';
-import { Header } from './components/header.js';
+import { Header } from './components/Header.js';
 import { SectionPartners } from './components/SectionPartners.js';
 import { SectionCourses } from './components/SectionCourses.js';
 import {scroll} from './components/scroll.js'

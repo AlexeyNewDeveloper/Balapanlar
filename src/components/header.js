@@ -1,5 +1,3 @@
-
-
 export class Header {
     constructor({header}) {
         this.header = header;
