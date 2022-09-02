@@ -1,8 +1,8 @@
 export class Popup {
-    constructor({popupSelector, contentContainer}) {
+    constructor({popup, contentContainer, buttonsClose}) {
         this._contentContainer = contentContainer;
-        this._popup = document.querySelector(popupSelector);
-        this._buttonClose = this._popup.querySelector('.popup__close-btn');
+        this._popup = popup;
+        this._buttonClose = buttonsClose;
         this._closeByEscCallback = this._closeByEsc.bind(this);
         this._closePopupCallback = this.closePopup.bind(this);
         this._closePopupToOverlayCallback = this._closePopupToOverlay.bind(this);
@@ -22,13 +22,17 @@ export class Popup {
 
     _setEventListeners() {
         document.addEventListener("keydown", this._closeByEscCallback);
-        this._buttonClose.addEventListener('click', this._closePopupCallback);
-        this._popup.addEventListener('click', this._closePopupToOverlayCallback)
+        this._buttonClose.forEach(button => {
+            button.addEventListener('click', this._closePopupCallback);
+        })
+        this._popup.addEventListener('click', this._closePopupToOverlayCallback);
     }
 
     _removeEventListeners() {
         document.removeEventListener("keydown", this._closeByEscCallback);
-        this._buttonClose.removeEventListener('click', this._closePopupCallback);
+        this._buttonClose.forEach(button => {
+            button.removeEventListener('click', this._closePopupCallback);
+        })
         this._popup.removeEventListener('click', this._closePopupToOverlayCallback)
     }
 

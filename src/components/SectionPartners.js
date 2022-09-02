@@ -1,12 +1,29 @@
 import { Popup } from './Popup.js';
 
 
+
 export class SectionPartners extends Popup {
-    constructor({popup, partnerTemplate, logoBox, contentContainer}) {
-        super({popupSelector: popup, contentContainer: contentContainer});
-        this._partnerTemplate = document.querySelector(partnerTemplate).content;
-        this._container = document.querySelector(logoBox);
+    constructor({paramsSectionPartners={
+        logoImgOfPopupPartner,
+        aboutOfPopupPartner, 
+        linkOfPopupPartner,
+        partnerNode,
+        partnerContainer,
+        logoSelector,
+        popup,
+        contentContainerSelector,
+        buttonClosePopupPartner,
+    }}) {
+        super({
+            popup: paramsSectionPartners.popup, 
+            contentContainer: paramsSectionPartners.contentContainerSelector,
+            buttonsClose: paramsSectionPartners.buttonClosePopupPartner,
+        });
+        this._params = paramsSectionPartners;
+        this._partnerNode = this._params.partnerNode;
+        this._container = this._params.partnerContainer;
     }
+
 
     _renderPartners(partner, partnerLogo) {
         partnerLogo.src = partner.image;
@@ -21,9 +38,9 @@ export class SectionPartners extends Popup {
 
 
     _addPartnerInfo(partner) {
-        document.querySelector(".popup-partner__logo-img").src = partner.image;
-        document.querySelector(".popup-partner__text").textContent = partner.about;
-        document.querySelector(".popup-partner__website-link").href = partner.website;
+        this._params.logoImgOfPopupPartner.src = partner.image;
+        this._params.aboutOfPopupPartner.textContent = partner.about;
+        this._params.linkOfPopupPartner.href = partner.website;
         super.openPopup();
     }
 
@@ -34,8 +51,8 @@ export class SectionPartners extends Popup {
 
     addPartners({partnersList}) {
         partnersList.forEach(partner => {
-            const partnerLink = this._partnerTemplate.querySelector(".partners__logo-link").cloneNode(true);
-            const partnerLogo = partnerLink.querySelector(".partners__partner-logo");
+            const partnerLink = this._params.partnerNode.cloneNode(true);
+            const partnerLogo = partnerLink.querySelector(this._params.logoSelector);
             this._addPartner(partner, partnerLogo);
             this._setEventListenersSectionPartners(partnerLogo, partner);
         })

@@ -20,12 +20,29 @@ export const partnersList = [
     
   ];
 
+const buttonCloseSelector = '.popup__close-btn';
+const popupPartner = document.querySelector('.popup-partner');
+const buttonClosePopupPartner = popupPartner.querySelectorAll(buttonCloseSelector);
+
+const popupCourse = document.querySelector('.popup-course');
+const buttonsClosePopupCourse = popupCourse.querySelectorAll(buttonCloseSelector);
+
+
 export const headerElement = document.querySelector('.header');
-
-// export const popups = document.querySelectorAll(".popup");
-// export const popupCloseBtn = document.querySelectorAll(".popup__close-btn");
-
-// export const coursePopup = document.querySelector(".popup-course");
-// export const courseOpenBtn  = document.querySelector(".course-item__browse");
-
-// export const partnerPopup = document.querySelector(".popup-partner");
+export const paramsSectionPartners = {
+    logoImgOfPopupPartner: document.querySelector('.popup-partner__logo-img'),
+    aboutOfPopupPartner: document.querySelector('.popup-partner__text-container'),
+    linkOfPopupPartner: document.querySelector('.popup-partner__website-link'),
+    partnerNode: document.querySelector('#partners').content.querySelector(".partners__logo-link"),
+    partnerContainer: document.querySelector('.partners__logo-box'),
+    logoSelector: '.partners__partner-logo',
+    popup: popupPartner,
+    contentContainerSelector: '.popup-partner__container',
+    buttonClosePopupPartner: buttonClosePopupPartner,
+};
+export const paramsSectionCourses = {
+    popup: popupCourse,
+    contentContainerSelector: '.popup-course__item',
+    buttonsOpenCourse: document.querySelectorAll('.course-item__browse'),
+    buttonsClosePopupCourse: buttonsClosePopupCourse,
+};
