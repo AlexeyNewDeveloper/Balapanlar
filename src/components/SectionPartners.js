@@ -39,7 +39,7 @@ export class SectionPartners extends Popup {
 
     _addPartnerInfo(partner) {
         this._params.logoImgOfPopupPartner.src = partner.image;
-        this._params.aboutOfPopupPartner.textContent = partner.about;
+        this._params.aboutOfPopupPartner.innerHTML = partner.about;
         this._params.linkOfPopupPartner.href = partner.website;
         super.openPopup();
     }
