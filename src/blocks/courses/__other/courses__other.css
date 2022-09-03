@@ -1,12 +1,13 @@
 .courses__other {
   margin: 10px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: .33fr .34fr .33fr;
   gap: 10px;
 }
 
 @media screen and (max-width: 1300px) {
   .courses__other {
+    display: flex;
     flex-direction: column;
     margin: 10px 20px;
   }
