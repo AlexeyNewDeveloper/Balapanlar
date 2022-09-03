@@ -147,8 +147,9 @@
 /*Block principles */
 
 @import url(./blocks/scroll-container/scroll-container.css);
+@import url(./blocks/scroll-container/__title-container/scroll-container__title-container);
+@import url(./blocks/scroll-container/__title/scroll-container__title.css);
 @import url(./blocks/principles/principles.css);
-@import url(./blocks/principles/__title/principles__title.css);
 @import url(./blocks/principles/__text/principles__text.css);
 @import url(./blocks/principles/__image/principle__image.css);
 @import url(./blocks/principles/__image/_size/principles__image_size_big.css);
