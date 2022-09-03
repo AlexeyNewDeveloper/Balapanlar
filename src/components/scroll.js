@@ -11,8 +11,8 @@ function start() {
       ScrollTrigger.create({
         animation: tl,
         trigger: ".scroll-container",
-        start: "top 80px",
-        end: "bottom 80px",
+        start: "top -80px",
+        end: "bottom -100px",
         scrub: true,
         pin: true
     });
