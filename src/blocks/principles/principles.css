@@ -1,38 +1,66 @@
 .principles {
     max-width: 1440px;
     background-color: #AE46FF;
-    height: 100vh;
+    height: 1000px;
     max-height: 1000px;
     margin: 0 -5px 0 0;
 }
 
-.principles:first-child {
+.principles:first-of-type {
    border-radius: 60px 0 0 60px;
 }
 
-.principles:last-child {
+.principles:last-of-type{
     border-radius: 0 60px 60px 0;
-    padding: 0 0 160px 0;
-    box-sizing: border-box;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .principles {
+        padding-top: 160px;
         margin: 0 0 -5px 0;
         height: auto;
     }
 
-    .principles:first-child {
+    .principles:first-of-type {
+        padding-top: 240px;
         border-radius: 60px 60px 0 0;
     }
 
-    .principles:last-child {
+    .principles:last-of-type {
         border-radius: 0 0 60px 60px;
     }
 }
 
+@media screen and (max-width: 660px) {
+    .principles {
+        padding-top: 120px;
+    }
+
+    .principles:first-of-type {
+        padding-top: 200px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .principles {
+        padding-top: 80px;
+    }
+
+    .principles:first-of-type {
+        padding-top: 160px;
+    }
+}
+
 @media screen and (max-width: 440px) {
-    .principles:last-child {
+    .principles {
+        padding-top: 60px;
+    }
+
+    .principles:first-of-type {
+        padding-top: 30px;
+    }
+
+    .principles:last-of-type {
         border-radius: 0 0 30px 30px;
         padding-bottom: 30px;
         margin: 0;

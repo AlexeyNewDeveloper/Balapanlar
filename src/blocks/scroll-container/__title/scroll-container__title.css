@@ -1,6 +1,8 @@
-.principles__title {
+.scroll-container__title {
+    display: flex;
+    justify-content: center;
     padding: 0;
-    margin: 120px 0 80px 0;
+    margin: 160px 0 30px 0;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -8,12 +10,11 @@
     line-height: 44px;
     text-align: center;
     letter-spacing: -1px;
-    font-feature-settings: 'pnum' on, 'lnum' on;
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 760px) {
-    .principles__title {
+@media screen and (max-width: 768px) {
+    .scroll-container__title {
         margin: 160px 0 40px 0;
         font-size: 30px;
         line-height: 37px;
@@ -21,8 +22,20 @@
     }
 }
 
+@media screen and (max-width: 660px) {
+    .scroll-container__title {
+        margin: 120px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .scroll-container__title {
+        margin: 80px 0 40px 0;
+    }
+}
+
 @media screen and (max-width: 450px ) {
-    .principles__title {
+    .scroll-container__title {
         margin: 30px 0 30px 0;
         font-size: 24px;
         line-height: 29px;

@@ -2,18 +2,16 @@
     max-width: 847px;
     margin: 40px 0 0 0;
     padding: 0;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 60px;
     line-height: 68px;
     text-align: center;
     letter-spacing: -1px;
-    font-feature-settings: 'pnum' on, 'lnum' on;
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .principles__text {
         margin: 40px auto 0 auto;
         max-width: 552px;
