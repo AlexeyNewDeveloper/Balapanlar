@@ -103,6 +103,7 @@
 @import url(./blocks/about/__overlay/_type/about__overlay_type_orange.css);
 @import url(./blocks/about/__figcaption/about__figcaption.css);
 @import url(./blocks/about/__figcaption/_color/about__figcaption_color_white.css);
+@import url(./blocks/about/__list-container/about__list-container.css);
 @import url(./blocks/about/__list-heading/about__list-heading.css);
 @import url(./blocks/about/__list/about__list.css);
 @import url(./blocks/about/__list-item/about__list-item.css);
