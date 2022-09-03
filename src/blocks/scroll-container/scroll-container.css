@@ -3,11 +3,13 @@
     display: flex; 
     overscroll-behavior: none;
     overflow: hidden;
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {
     .scroll-container {
-        flex-direction: column; 
+        flex-direction: column;
+        margin-bottom: 0;
     }
 }
 
