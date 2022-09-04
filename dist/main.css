@@ -2437,14 +2437,17 @@ template {
   }
 }
 .scroll-container {
+    position: relative;
     display: flex; 
     overscroll-behavior: none;
     overflow: hidden;
+    margin-bottom: 100px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .scroll-container {
-        flex-direction: column; 
+        flex-direction: column;
+        margin-bottom: 0;
     }
 }
 
@@ -2453,47 +2456,19 @@ template {
         background-color: #fff; 
     }
 }
-.principles {
-    max-width: 1440px;
-    background-color: #AE46FF;
-    height: 1000px;
-    max-height: 1000px;
-    margin: 0 -5px 0 0;
+.scroll-container__title-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
 }
-
-.principles:first-child {
-   border-radius: 60px 0 0 60px;
-}
-
-.principles:last-child {
-    border-radius: 0 60px 60px 0;
-}
-
-@media screen and (max-width: 760px) {
-    .principles {
-        margin: 0 0 -5px 0;
-        height: auto;
-    }
-
-    .principles:first-child {
-        border-radius: 60px 60px 0 0;
-    }
-
-    .principles:last-child {
-        border-radius: 0 0 60px 60px;
-    }
-}
-
-@media screen and (max-width: 440px) {
-    .principles:last-child {
-        border-radius: 0 0 30px 30px;
-        padding-bottom: 30px;
-        margin: 0;
-    }
-}
-.principles__title {
+.scroll-container__title {
+    display: flex;
+    justify-content: center;
     padding: 0;
-    margin: 0 0 30px 0;
+    margin: 160px 0 30px 0;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -2504,8 +2479,8 @@ template {
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 760px) {
-    .principles__title {
+@media screen and (max-width: 768px) {
+    .scroll-container__title {
         margin: 160px 0 40px 0;
         font-size: 30px;
         line-height: 37px;
@@ -2513,11 +2488,91 @@ template {
     }
 }
 
+@media screen and (max-width: 660px) {
+    .scroll-container__title {
+        margin: 120px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .scroll-container__title {
+        margin: 80px 0 40px 0;
+    }
+}
+
 @media screen and (max-width: 450px ) {
-    .principles__title {
+    .scroll-container__title {
         margin: 30px 0 30px 0;
         font-size: 24px;
         line-height: 29px;
+    }
+}
+.principles {
+    max-width: 1440px;
+    background-color: #AE46FF;
+    height: 1000px;
+    max-height: 1000px;
+    margin: 0 -5px 0 0;
+}
+
+.principles:first-of-type {
+   border-radius: 60px 0 0 60px;
+}
+
+.principles:last-of-type{
+    border-radius: 0 60px 60px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .principles {
+        padding-top: 160px;
+        margin: 0 0 -5px 0;
+        height: auto;
+    }
+
+    .principles:first-of-type {
+        padding-top: 240px;
+        border-radius: 60px 60px 0 0;
+    }
+
+    .principles:last-of-type {
+        border-radius: 0 0 60px 60px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .principles {
+        padding-top: 120px;
+    }
+
+    .principles:first-of-type {
+        padding-top: 200px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .principles {
+        padding-top: 80px;
+    }
+
+    .principles:first-of-type {
+        padding-top: 160px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .principles {
+        padding-top: 60px;
+    }
+
+    .principles:first-of-type {
+        padding-top: 30px;
+    }
+
+    .principles:last-of-type {
+        border-radius: 0 0 30px 30px;
+        padding-bottom: 30px;
+        margin: 0;
     }
 }
 .principles__text {
@@ -2533,7 +2588,7 @@ template {
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .principles__text {
         margin: 40px auto 0 auto;
         max-width: 552px;
@@ -2567,7 +2622,7 @@ template {
     border-radius: 500px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .principles__image_size_big {
         width: 420px;
         border-radius: 50%;
@@ -2593,13 +2648,19 @@ template {
     }
 }
 .principles__container {
+    padding-top: 240px;
     max-width: 1440px;
     width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .principles__container {
+        padding-top: 0;
+    }
 }
 /* Block page */
 
